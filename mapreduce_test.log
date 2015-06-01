@@ -1,0 +1,105 @@
+DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time, always=false, type=DEFAULT, sampleName=Ops)
+ DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time, always=false, type=DEFAULT, sampleName=Ops)
+ DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, value=[GetGroups], valueName=Time, always=false, type=DEFAULT, sampleName=Ops)
+ DEBUG main org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+ DEBUG main org.apache.hadoop.security.authentication.util.KerberosName - Kerberos krb5 configuration not found, setting default realm to empty
+ DEBUG main org.apache.hadoop.security.Groups -  Creating new Groups object
+ DEBUG main org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+ DEBUG main org.apache.hadoop.util.NativeCodeLoader - Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+ DEBUG main org.apache.hadoop.util.NativeCodeLoader - java.library.path=/Users/yol/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+ WARN main org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ DEBUG main org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback - Falling back to shell based
+ DEBUG main org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+ DEBUG main org.apache.hadoop.util.Shell - Failed to detect a valid hadoop home directory
+ java.io.IOException: HADOOP_HOME or hadoop.home.dir are not set.
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:302)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:327)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:257)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:234)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:749)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:734)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:607)
+	at org.apache.hadoop.fs.FileSystem$Cache$Key.<init>(FileSystem.java:2748)
+	at org.apache.hadoop.fs.FileSystem$Cache$Key.<init>(FileSystem.java:2740)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:2606)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:368)
+	at org.apache.hadoop.examples.HDFSdemo.main(HDFSdemo.java:15)
+DEBUG main org.apache.hadoop.util.Shell - setsid is not available on this machine. So not using it.
+ DEBUG main org.apache.hadoop.util.Shell - setsid exited with exit code 0
+ DEBUG main org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+ DEBUG main org.apache.hadoop.security.UserGroupInformation - hadoop login
+ DEBUG main org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+ DEBUG main org.apache.hadoop.security.UserGroupInformation - using local user:UnixPrincipal: yol
+ DEBUG main org.apache.hadoop.security.UserGroupInformation - UGI loginUser:yol (auth:SIMPLE)
+ DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)], about=, always=false, type=DEFAULT, sampleName=Ops)
+ DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)], about=, always=false, type=DEFAULT, sampleName=Ops)
+ DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(valueName=Time, value=[GetGroups], about=, always=false, type=DEFAULT, sampleName=Ops)
+ DEBUG main org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+ DEBUG main org.apache.hadoop.security.authentication.util.KerberosName - Kerberos krb5 configuration not found, setting default realm to empty
+ DEBUG main org.apache.hadoop.security.Groups -  Creating new Groups object
+ DEBUG main org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+ DEBUG main org.apache.hadoop.util.NativeCodeLoader - Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+ DEBUG main org.apache.hadoop.util.NativeCodeLoader - java.library.path=/Users/yol/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+ WARN main org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ DEBUG main org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback - Falling back to shell based
+ DEBUG main org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+ DEBUG main org.apache.hadoop.util.Shell - Failed to detect a valid hadoop home directory
+ java.io.IOException: HADOOP_HOME or hadoop.home.dir are not set.
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:302)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:327)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:257)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:234)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:749)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:734)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:607)
+	at org.apache.hadoop.ipc.RPC.getProtocolProxy(RPC.java:446)
+	at org.apache.hadoop.ipc.RPC.getProtocolProxy(RPC.java:600)
+	at org.apache.hadoop.ipc.RPC.getProxy(RPC.java:557)
+	at org.apache.hadoop.examples.rpc.RPCClient.main(RPCClient.java:15)
+DEBUG main org.apache.hadoop.util.Shell - setsid is not available on this machine. So not using it.
+ DEBUG main org.apache.hadoop.util.Shell - setsid exited with exit code 0
+ DEBUG main org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+ DEBUG main org.apache.hadoop.security.UserGroupInformation - hadoop login
+ DEBUG main org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+ DEBUG main org.apache.hadoop.security.UserGroupInformation - using local user:UnixPrincipal: yol
+ DEBUG main org.apache.hadoop.security.UserGroupInformation - UGI loginUser:yol (auth:SIMPLE)
+ DEBUG main org.apache.hadoop.ipc.Server - rpcKind=RPC_WRITABLE, rpcRequestWrapperClass=class org.apache.hadoop.ipc.WritableRpcEngine$Invocation, rpcInvoker=org.apache.hadoop.ipc.WritableRpcEngine$Server$WritableRpcInvoker@2e2b5ba8
+ DEBUG main org.apache.hadoop.ipc.Client - getting client out of cache: org.apache.hadoop.ipc.Client@21e9c99c
+ DEBUG main org.apache.hadoop.ipc.Client - The ping interval is 60000 ms.
+ DEBUG main org.apache.hadoop.ipc.Client - Connecting to /123.57.39.109:9527
+ INFO main org.apache.hadoop.ipc.Client - Retrying connect to server: 123.57.39.109/123.57.39.109:9527. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
+ INFO main org.apache.hadoop.ipc.Client - Retrying connect to server: 123.57.39.109/123.57.39.109:9527. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
+ INFO main org.apache.hadoop.ipc.Client - Retrying connect to server: 123.57.39.109/123.57.39.109:9527. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
+ INFO main org.apache.hadoop.ipc.Client - Retrying connect to server: 123.57.39.109/123.57.39.109:9527. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
+ INFO main org.apache.hadoop.ipc.Client - Retrying connect to server: 123.57.39.109/123.57.39.109:9527. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
+ INFO main org.apache.hadoop.ipc.Client - Retrying connect to server: 123.57.39.109/123.57.39.109:9527. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
+ INFO main org.apache.hadoop.ipc.Client - Retrying connect to server: 123.57.39.109/123.57.39.109:9527. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
+ INFO main org.apache.hadoop.ipc.Client - Retrying connect to server: 123.57.39.109/123.57.39.109:9527. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
+ INFO main org.apache.hadoop.ipc.Client - Retrying connect to server: 123.57.39.109/123.57.39.109:9527. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
+ INFO main org.apache.hadoop.ipc.Client - Retrying connect to server: 123.57.39.109/123.57.39.109:9527. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
+ DEBUG main org.apache.hadoop.ipc.Client - closing ipc connection to 123.57.39.109/123.57.39.109:9527: Connection refused
+ java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:529)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:493)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:606)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:700)
+	at org.apache.hadoop.ipc.Client$Connection.access$2800(Client.java:367)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1463)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1382)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1364)
+	at org.apache.hadoop.ipc.WritableRpcEngine$Invoker.invoke(WritableRpcEngine.java:231)
+	at com.sun.proxy.$Proxy4.sayHi(Unknown Source)
+	at org.apache.hadoop.examples.rpc.RPCClient.main(RPCClient.java:17)
+DEBUG main org.apache.hadoop.ipc.Client - IPC Client (1313211444) connection to /123.57.39.109:9527 from yol: closed
+ 
